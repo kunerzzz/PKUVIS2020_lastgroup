@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+{% for filename in cssList %}
+    <link rel="stylesheet" type="text/css" href="{{ filename }}" />
+{%- endfor %}
+{% for filename in jsList %}
+    <script src="{{ filename }}"></script>
+{%- endfor %}
+</head>
+<body>
+    <div id="fullpage">
+    {%- for page in pageList %}
+        {{ page }}
+    {%- endfor %}
+    </div>
+</body>
+</html>
