@@ -7,18 +7,24 @@
     <title>Page</title>
     <script src="../build/js/jquery-3.5.1.js"></script>
     <script src="../build/js/d3.v6.js"></script>
+    <script src="../build/js/fullpage.min.js"></script>
+    <script src="../build/js/fullpage_init.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../build/css/fullpage.min.css" />
 
     <!-- Your Javascript and CSS here -->
 
 </head>
 
 <body>
-    <!-- BEGIN: DO NOT TOUCH THIS LINE -->
-    <div id="{{ pageName }}" class="section">
-        <!-- Fill Your Content Here -->
-        <p>{{ pageName }}</p>
+    <div id="fullpage">
+        <!-- BEGIN: DO NOT TOUCH THIS LINE -->
+        <div id="{{ pageName }}" class="section">
+            <!-- Fill Your Content Here -->
+            <p>{{ pageName }}</p>
+        </div>
+        <!-- END: DO NOT TOUCH THIS LINE -->
     </div>
-    <!-- END: DO NOT TOUCH THIS LINE -->
 </body>
 
 </html>
