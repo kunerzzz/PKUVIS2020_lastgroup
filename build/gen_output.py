@@ -9,23 +9,20 @@ if len(sys.argv) < 2:
 title = sys.argv[1]
 
 cssList = [
-    'css/fullpage.min.css',
-    'css/fullpage.min.css.map'
+    'css/fullpage.css',
 ]
 jsList = [
     'js/jquery-3.5.1.js',
-    'js/fullpage.min.js',
-    'js/fullpage.min.js.map',
+    'js/fullpage.js',
     'js/d3.v6.js',
-
-    'js/fullpage_init.js'
+    'js/init.js'
 ]
 
-cssList += map(lambda x: 'css/' + x, filter(lambda x: x[-3:] == 'css', os.listdir('css/')))
-jsList += map(lambda x: 'js/' + x, filter(lambda x: x[-2:] == 'js', os.listdir('js/')))
+cssList += map(lambda x: 'css/' + x, filter(lambda x: x[-3:] == 'css' and x[0] != '_', os.listdir('css/')))
+jsList += map(lambda x: 'js/' + x, filter(lambda x: x[-2:] == 'js' and x[0] != '_', os.listdir('js/')))
 
 pageList = []
-fileList = list(map(lambda x: 'pages/' + x, filter(lambda x: x[-4:] == 'html', os.listdir("pages/"))))
+fileList = list(map(lambda x: 'pages/' + x, filter(lambda x: x[-4:] == 'html' and x[0] != '_', os.listdir("pages/"))))
 fileList.sort()
 for filename in fileList:
     with open(filename, "r") as f:

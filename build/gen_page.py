@@ -8,17 +8,28 @@ if len(sys.argv) < 2:
 
 pageName = sys.argv[1]
 
-tf = open("template/page_template.html", "r")
-template = Template(tf.read())
-tf.close()
+iFileName = {"html": "template/page_template.html", "js": "template/pagejs_template.js", "css": "template/pagecss_template.css"}
+oFileName = {
+    "html": "pages/{}.html".format(pageName), 
+    "js": "js/{}.js".format(pageName), 
+    "css": "css/{}.css".format(pageName)
+}
 
-filename = "pages/{}.html".format(pageName)
-if os.path.exists(filename):
-    print("Error: {} exists".format(filename))
+ok = True
+for _, fn in oFileName.items():
+    if os.path.exists(fn):
+        print("Error: {} exists".format(fn))
+        ok = False
+if not ok:
     exit(1)
 
-of = open(filename, "w")
-of.write(template.render(pageName=pageName))
-of.close()
+for k in ("html", "js", "css"):
+    tf = open(iFileName[k], "r")
+    template = Template(tf.read())
+    tf.close()
+
+    of = open(oFileName[k], "w")
+    of.write(template.render(pageName=pageName))
+    of.close()
 
 

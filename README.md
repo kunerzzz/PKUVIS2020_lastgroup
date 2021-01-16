@@ -41,3 +41,4 @@ Then open output/index.html in browser to see result
 **CAUTION**: 
 - All Javascript files in js/ and CSS files in css/ will be used by the output html.
 - Pages' order follows their filenames' dictionary order.
+- Files whose name starts with underscore will not be exported to output.

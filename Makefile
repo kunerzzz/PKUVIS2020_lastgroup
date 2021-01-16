@@ -8,8 +8,8 @@ output:
 	mkdir -p output/js && \
 	mkdir -p output/css && \
 	mkdir -p output/data && \
-	cp build/css/* output/css/ && \
-	cp build/js/* output/js/ && \
+	cp vendor/css/* output/css/ && \
+	cp vendor/js/* output/js/ && \
 	(cp js/* output/js/ 2>/dev/null || echo "\033[33;1m[WARN]\033[0m No js files") && \
 	(cp css/* output/css/ 2>/dev/null || echo "\033[33;1m[WARN]\033[0m No css files") && \
 	(cp data/* output/data 2>/dev/null || echo "\033[33;1m[WARN]\033[0m No data files") && \
