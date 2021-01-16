@@ -34,7 +34,7 @@ for filename in fileList:
                 begin = i + 1
             if content.count("<!-- END: DO NOT TOUCH THIS LINE -->"):
                 end = i
-        pageLines = map(lambda x: x.rstrip(), filter(lambda x: x.count('<!-- Fill Your Content Here -->') == 0, lines[begin:end]))
+        pageLines = map(lambda x: x.rstrip(), filter(lambda x: x.count('<!-- Your Content Here -->') == 0, lines[begin:end]))
         pageList += list(pageLines)
 
 tf = open("template/output_template.html", "r")

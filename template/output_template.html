@@ -7,6 +7,7 @@
 {% for filename in cssList %}
     <link rel="stylesheet" type="text/css" href="{{ filename }}" />
 {%- endfor %}
+    <script>const isProduct = true;</script>
 {% for filename in jsList %}
     <script src="{{ filename }}"></script>
 {%- endfor %}
