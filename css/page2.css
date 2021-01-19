@@ -42,7 +42,8 @@
 }
 
 #page2 .container{
-    background-color: rgba(240, 240, 240, 1.0);
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     overflow: hidden;
 }
 
@@ -50,9 +51,11 @@
     font-size: 3rem;
     text-align: center;
     position: fixed;
-    left:0;
-    right:0;
-    top:3%;
+    left:7%;
+    right:7%;
+    top:2%;
+    height: 14%;
+    width: 86%;
 }
 
 #page2 .axis_label {
