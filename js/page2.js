@@ -10,11 +10,12 @@ let parseDate = d3.utcParse('%a %b %d %H:%M:%S %Z %Y');
 let x, y, axis_x, axis_y, xGroup, yGroup;
 let old_time = [[new Date(2020, 4, 12),0]]
 let postpone = [[new Date(2020, 3, 18), 0], [new Date(2020, 5, 3), 30]]
-let important_time = [[new Date(2020, 5, 5), 0], [new Date(2020, 6, 6), -30], [new Date(2020, 6, 14), 30], [new Date(2020, 7, 13), 0], [new Date(2020, 8, 25), 0], [new Date(2020, 11, 6), 0], [new Date(2020, 11, 13), 0]];
+let important_time = [[new Date(2020,1, 20), 0],[new Date(2020, 5, 5), 0], [new Date(2020, 6, 6), -30], [new Date(2020, 6, 14), 30], [new Date(2020, 7, 13), 0], [new Date(2020, 8, 25), 0], [new Date(2020, 11, 6), 0], [new Date(2020, 11, 13), 0]];
 let timetext_gray = [[new Date(2020, 4, 12), 'Original Paper Submission DDL', -30],
                     [new Date(2020, 3, 18), 'First Postpone', 0],
                     [new Date(2020, 5, 3), 'Second Postpone', 30]];
-let timetext_red = [[new Date(2020, 5, 5), 'Paper Submission DDL', 0],
+let timetext_red = [[new Date(2020, 1, 20), 'Call For Papers', 0],
+                    [new Date(2020, 5, 5), 'Paper Submission DDL', 0],
                     [new Date(2020, 6, 6), 'Review Period Begins', -30],
                     [new Date(2020, 6, 14), 'Desk-Rejected Result Notification', 30],
                     [new Date(2020, 7, 13), 'Author Response Ends', 0],
