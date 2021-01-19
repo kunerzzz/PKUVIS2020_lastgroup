@@ -188,16 +188,16 @@ let page2 = {
                 //console.log(parseFloat(d['emotion']));
                 return y(parseInt(d[y_attr]));
             })
-            .attr('r', 3)
+            .attr('r', 4)
             .attr('opacity', (d, i) => {
                 if (d['emotion'] > 0.0)
                     return 0.5;
                 else
-                    return 0.8;
+                    return 1.0;
             })
             .attr('fill', (d, i) => {
                 if (d['emotion'] > 0.0)
-                    return 'SteelBlue';
+                    return 'MediumPurple';
                 else
                     return 'Gold';
             })
@@ -320,7 +320,7 @@ let page2 = {
                 else
                     return 'hidden';
             });
-        legend_data = [['SteelBlue', 'positive sentiment', 0.0], ['yellow', 'negative sentiment', 0.3]];
+        legend_data = [['MediumPurple', 'positive sentiment', 0.0], ['gold', 'negative sentiment', 0.3]];
         rect_width = page2_padding.left * 0.3;
         rect_height = page2_padding.top * 0.1;
         legend = page2_svg.append('g')
