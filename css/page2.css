@@ -1,32 +1,5 @@
 /* Style Sheet for page2*/
 /* Descendant selector(https://www.w3school.com.cn/css/css_selector_descendant.asp) may be helpful to not pollute other pages' style*/
-#page2 @font-face {
-    font-family: 'Khand-Regular';
-    src: url('./font/Khand-Regular.ttf');
-}
-#page2 @font-face {
-    font-family: 'KAITI';
-    src: url(./font/KAITI.ttf);
-}
-#page2 @font-face {
-    font-family: 'PingFangSC-Regular';
-    src: url(./font/PingFang-SC-Regular.ttf);
-}
-
-#page2 @media only screen and (min-width: 1080px) {
-    html {
-        font-size: 15px !important;
-    }
-}
-#page2 @media only screen and (min-width: 1440px) {
-    html {
-        font-size: 25px !important;
-    }
-}
-
-
-
-
 #page2 html {
     width: 100%;
     height: 100%;
@@ -50,7 +23,7 @@
 #page2 .title {
     font-size: 3rem;
     text-align: center;
-    position: fixed;
+    position: absolute;
     left:7%;
     right:7%;
     top:2%;
