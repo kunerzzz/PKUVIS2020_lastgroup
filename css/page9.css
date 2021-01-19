@@ -1,0 +1,7 @@
+/* Style Sheet for page9*/
+/* Descendant selector(https://www.w3school.com.cn/css/css_selector_descendant.asp) may be helpful to not pollute other pages' style*/
+#page9 p {
+    font-size: 5rem;
+    text-align: center;
+    font-family: appleberry;
+}
