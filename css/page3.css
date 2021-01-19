@@ -1,8 +1,22 @@
 /* Style Sheet for page3*/
 /* Descendant selector(https://www.w3school.com.cn/css/css_selector_descendant.asp) may be helpful to not pollute other pages' style*/
 #page3 p {
-    font-size: 3rem;
+    font-size: 20px;
     text-align: center;
+}
+ article {
+    max-width: 120px;
+    height: 405px;
+    padding: 10px;
+    /* background-color: rgb(203, 232, 255); */
+    background-image: linear-gradient(to bottom, rgba(223, 223, 223, 0.596), rgba(0,0,0,0));
+}
+
+ .simple {
+    box-shadow: 3px 3px 3px rgba(140, 162, 180, 0.7);
+}
+ .simple:hover {
+    background-color: rgba(160,200,220,0.12);
 }
 @import 'https://fonts.googleapis.com/css?family=Roboto:400,700&subset=cyrillic';
  .tw-img {
