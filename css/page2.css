@@ -1,5 +1,10 @@
 /* Style Sheet for page2*/
 /* Descendant selector(https://www.w3school.com.cn/css/css_selector_descendant.asp) may be helpful to not pollute other pages' style*/
+@font-face {
+    font-family: 'appleberry';
+    src: url('appleberry.ttf') format('truetype');
+}
+
 #page2 html {
     width: 100%;
     height: 100%;
@@ -21,7 +26,7 @@
 }
 
 #page2 .title {
-    font-size: 3rem;
+    font-size: 5rem;
     text-align: center;
     position: absolute;
     left:7%;
@@ -29,6 +34,8 @@
     top:2%;
     height: 14%;
     width: 86%;
+    margin-top: 16px;
+    font-family: appleberry;
 }
 
 #page2 .axis_label {

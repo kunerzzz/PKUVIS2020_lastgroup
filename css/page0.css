@@ -47,6 +47,13 @@
     color: #808080;
 }
 
+#page0 #author p{
+    font-family: "Microsoft YaHei B";
+    font-size: 1rem;
+    text-align: center;
+    color: #808080;
+}
+
 @keyframes shake
 {
     0%   {transform: translateY(0rem);}
