@@ -1,5 +1,10 @@
 /* Style Sheet for page1*/
 /* Descendant selector(https://www.w3school.com.cn/css/css_selector_descendant.asp) may be helpful to not pollute other pages' style*/
+@font-face {
+    font-family: 'appleberry';
+    src: url('../vendor/font/appleberry.ttf') format('truetype');
+}
+
 #page1 .flex-container {
     display: -webkit-flex; /* Safari */
     display: flex;
@@ -15,7 +20,15 @@
 
 #page1 #title {
     flex: 0 1 auto;
-    height: 15%;
+    height: 20%;
+}
+
+#page1 #title p {
+    font-size: 5rem;
+    text-align: center;
+    font-family: appleberry;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #page1 #content {
@@ -26,34 +39,87 @@
 #page1 .left-column {
     flex: 1 1 auto;
     flex-flow: column nowrap;
+    width: 40%;
 }
 
 #page1 .right-column {
     flex: 1 1 auto;
     flex-flow: column nowrap;
+    width: 40%;
 }
 
 #page1 .container {
     flex: 1 1 auto;
     background: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#page1 #title p {
-    font-size: 2rem;
-    text-align: center;
+    margin: 20px;
 }
 
 #page1 #statistic-container {
+    height: 50%;
+    padding: 20px 40px 20px 70px;
 }
 
 #page1 #wordcloud-container {
+    height: 50%;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#page1 #wordcloud-container svg{
+    flex: 1 1 auto;
+}
+
+#page1 #wordcloud-container .caption {
+    padding-top: 10px;
+    font-size: 1.5rem;
 }
 
 #page1 #info-container {
-    flex: 0.1 1 auto;
+    flex: 0.3 1 auto;
 }
 
+
+
 #page1 #ranklist-container {
-    flex: 0.9 1 auto;
+    flex: 1 1 auto;
+}
+
+#page1 #ranklist-container svg {
+    flex: 1 1 auto;
+    align-self: center;
+    justify-self: center;
+}
+
+#page1 .icon {
+    display: inline-block;
+    max-height: 50px;
+    max-width: 50px;
+}
+
+#page1 .text-div {
+    flex: 1 0 auto;
+    align-self: stretch;
+    justify-content: space-between;
+    flex-flow: column nowrap;
+
+}
+
+#page1 .text-div div {
+    font-size: 1.5rem;
+    flex: 1 1 auto;
+}
+
+#page1 .text-div div a{
+    font-size: 1.7rem;
+}
+
+#page1 #schedule {
+    padding-left: 30px;
+    padding-right: 150px;
+}
+
+
+#page1 .y-axis {
+    font-size: 1rem;
 }

@@ -9,9 +9,12 @@
     <script src="../vendor/js/jquery-3.5.1.js"></script>
     <script src="../vendor/js/d3.v6.js"></script>
     <script src="../vendor/js/fullpage.js"></script>
+    <script src="../vendor/js/d3.layout.cloud.js"></script>
+    <script src="../vendor/js/d3-milestones.min.js"></script>
     <script src="../js/init.js"></script>
 
     <link rel="stylesheet" type="text/css" href="../vendor/css/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="../vendor/css/d3-milestones.css" />
 
     <!-- Your Javascript here -->
     <script src="../js/common.js"></script>
@@ -35,15 +38,42 @@
                 </div>
                 <div id="content" class="flex-container">
                     <div class="left-column flex-container">
-                        <div id="statistic-container" class="container">
+                        <div id="statistic-container" class="container flex-container">
+                            <div class="text-div flex-container">
+                                <div>
+                                    <img class='icon' src="../img/pg1-submission.svg">
+                                    Paper submitted:
+                                    <a>10</a><a>,</a><a>10%</a>
+                                </div>
+                                <div>
+                                    <img class='icon' src="../img/pg1-accept.svg">
+                                    Paper Accepted:
+                                    <a>10</a><a>,</a><a>10%</a>
+                                </div>
+                                <div>
+                                    <img class='icon' src="../img/pg1-spotlight.svg">
+                                    Spotlight:
+                                    <a>10</a><a>,</a><a>10%</a>
+                                </div>
+                                <div>
+                                    <img class='icon' src="../img/pg1-oral.svg">
+                                    Oral:
+                                    <a>10</a><a>,</a><a>10%</a>
+                                </div>
+                            </div>
+                            <svg height="300" width="300"></svg>
                         </div>
-                        <div id="wordcloud-container" class="container">
+                        <div id="wordcloud-container" class="container flex-container">
+                            <div class="caption">Keywords in papers' title</div>
+                            <svg width="900" height="300"></svg>
                         </div>
                     </div>
                     <div class="right-column flex-container" >
                         <div id="info-container" class="container">
+                            <div id="schedule"></div>
                         </div>
-                        <div id="ranklist-container" class="container">
+                        <div id="ranklist-container" class="container flex-container">
+                            <svg width="900" height="500"></svg>
                         </div>
                     </div>
                 </div>
