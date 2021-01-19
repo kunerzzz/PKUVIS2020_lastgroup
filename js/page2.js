@@ -8,14 +8,15 @@ let page2_height = 0.8 * _height;
 let page2_padding = { 'left': 0.1 * page2_width, 'bottom': 0.1 * page2_height, 'top': 0.1 * page2_height, 'right': 0.05 * page2_width };
 let parseDate = d3.utcParse('%a %b %d %H:%M:%S %Z %Y');
 let x, y, axis_x, axis_y, xGroup, yGroup;
-let old_time = [new Date(2020, 4, 12)]
-let postpone = [new Date(2020, 3, 18), new Date(2020, 5, 3)]
-let important_time = [new Date(2020, 5, 5), new Date(2020, 6, 6), new Date(2020, 7, 13), new Date(2020, 8, 25), new Date(2020, 11, 6), new Date(2020, 11, 13)];
-let timetext_gray = [[new Date(2020, 4, 12), 'Original Paper Submission DDL', -20],
+let old_time = [[new Date(2020, 4, 12),0]]
+let postpone = [[new Date(2020, 3, 18), 0], [new Date(2020, 5, 3), 30]]
+let important_time = [[new Date(2020, 5, 5), 0], [new Date(2020, 6, 6), -30], [new Date(2020, 6, 14), 30], [new Date(2020, 7, 13), 0], [new Date(2020, 8, 25), 0], [new Date(2020, 11, 6), 0], [new Date(2020, 11, 13), 0]];
+let timetext_gray = [[new Date(2020, 4, 12), 'Original Paper Submission DDL', -30],
                     [new Date(2020, 3, 18), 'First Postpone', 0],
-                    [new Date(2020, 5, 3), 'Second Postpone', +20]];
+                    [new Date(2020, 5, 3), 'Second Postpone', 30]];
 let timetext_red = [[new Date(2020, 5, 5), 'Paper Submission DDL', 0],
-                    [new Date(2020, 6, 6), 'Review Period Begins', -20],
+                    [new Date(2020, 6, 6), 'Review Period Begins', -30],
+                    [new Date(2020, 6, 14), 'Desk-Rejected Result Notification', 30],
                     [new Date(2020, 7, 13), 'Author Response Ends', 0],
                     [new Date(2020, 8, 25), 'Author Notification', 0],
                     [new Date(2020, 11, 6), 'Conference', 0]];
@@ -80,8 +81,8 @@ let page2 = {
 
             })
         page2_svg.selectAll('.timeline')
-            .attr('x1', (d, i) => xz(d))
-            .attr('x2', (d, i) => xz(d));
+            .attr('x1', (d, i) => xz(d[0]))
+            .attr('x2', (d, i) => xz(d[0]));
         text_gray.remove();
         text_red.remove();
         text_gray = page2_svg.append('g')
@@ -93,6 +94,7 @@ let page2 = {
             .attr('y', d => (page2_padding.top - 2 + d[2]))
             .attr("font-size", 14)
             .attr('fill', 'gray')
+            .attr('opacity', 0.7)
             .style('visibility', function () {
                 let idx = $("#select_page2_timeline option:selected").val();
                 if (idx == 0)
@@ -109,6 +111,7 @@ let page2 = {
             .attr('y', d => (page2_padding.top - 2 + d[2]))
             .attr("font-size", 14)
             .attr('fill', 'red')
+            .attr('opacity', 0.7)
             .style('visibility', function () {
                 let idx = $("#select_page2_timeline option:selected").val();
                 if (idx == 0)
@@ -230,10 +233,10 @@ let page2 = {
             .data(old_time)
             .enter().append('line')
             .attr('class', 'timeline')
-            .attr('y1', page2_padding.top - 20)
+            .attr('y1', page2_padding.top - 30)
             .attr('y2', page2_height - page2_padding.bottom)
-            .attr('x1', (d, i) => { console.log(d); return x(d); })
-            .attr('x2', (d, i) => x(d))
+            .attr('x1', (d, i) => { console.log(d); return x(d[0]); })
+            .attr('x2', (d, i) => x(d[0]))
             .attr("stroke", "gray")
             .attr("stroke-width", 1.5)
             .attr('opacity', 0.5)
@@ -250,10 +253,10 @@ let page2 = {
             .data(postpone)
             .enter().append('line')
             .attr('class', 'timeline')
-            .attr('y1', page2_padding.top)
+            .attr('y1', (d,i)=> page2_padding.top + d[1])
             .attr('y2', page2_height - page2_padding.bottom)
-            .attr('x1', (d, i) => { console.log(d); return x(d); })
-            .attr('x2', (d, i) => x(d))
+            .attr('x1', (d, i) => { console.log(d); return x(d[0]); })
+            .attr('x2', (d, i) => x(d[0]))
             .attr("stroke", "gray")
             .attr("stroke-width", 1.5)
             .attr('opacity', 0.5)
@@ -269,13 +272,13 @@ let page2 = {
             .data(important_time)
             .enter().append('line')
             .attr('class', 'timeline')
-            .attr('y1', page2_padding.top)
+            .attr('y1', (d,i)=> page2_padding.top + d[1])
             .attr('y2', page2_height - page2_padding.bottom)
-            .attr('x1', (d, i) => { console.log(d); return x(d); })
-            .attr('x2', (d, i) => x(d))
+            .attr('x1', (d, i) => { console.log(d); return x(d[0]); })
+            .attr('x2', (d, i) => x(d[0]))
             .attr("stroke", "red")
             .attr("stroke-width", 1.5)
-            .attr('opacity', 0.5)
+            .attr('opacity', 0.3)
             .style('visibility', function () {
                 let idx = $("#select_page2_timeline option:selected").val();
                 if (idx == 0)
@@ -292,6 +295,7 @@ let page2 = {
             .attr('y', d => (page2_padding.top - 2 + d[2]))
             .attr("font-size", 14)
             .attr('fill', 'gray')
+            .attr('opacity', 0.7)
             .style('visibility', function () {
                 let idx = $("#select_page2_timeline option:selected").val();
                 if (idx == 0)
@@ -308,6 +312,7 @@ let page2 = {
             .attr('y', d => (page2_padding.top - 2 + d[2]))
             .attr("font-size", 14)
             .attr('fill', 'red')
+            .attr('opacity', 0.7)
             .style('visibility', function () {
                 let idx = $("#select_page2_timeline option:selected").val();
                 if (idx == 0)
