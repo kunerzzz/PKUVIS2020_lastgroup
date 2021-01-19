@@ -35,9 +35,14 @@ let page1 = {
         let g = svg.append('g')
             .attr('transform', `translate(${width / 2}, ${height / 2}) scale(0.9)`);
         let data = page1.submission_data[page1.piechart_year - 2009];
-        d3.selectAll("#page1 ")
         let data_entities = [];
         Object.keys(data).map(d => {data[d] = +data[d]; data_entities.push({'data':d, 'value':data[d]})});
+        for (let i = 0; i < 4; ++i) {
+            d3.select(`#pg1-statistic-container > div > div:nth-child(${i + 1}) > a.number`)
+                .text(data_entities[i]['value']);
+            d3.select(`#pg1-statistic-container > div > div:nth-child(${i + 1}) > a.rate`)
+                .text((100 * data_entities[i]['value'] / data_entities[0]['value']).toFixed(2) + '%');
+        }
         let colorSpectral = d3.interpolateSpectral;
         let color = d3.scaleOrdinal(Object.keys(data), [colorSpectral(1), colorSpectral(0.666), colorSpectral(0.333), colorSpectral(0)]);
         // console.log(Object.keys(data), color('oral'));
@@ -143,9 +148,7 @@ let page1 = {
             .rotate(0)
             .fontSize(fontSize_f)      // font size of words
             .on("end", draw_wordcloud);
-        console.log('pg1-3');
         layout.start();
-        console.log('pg1-4');
         function draw_wordcloud(words) {
             console.log(d3.min(words, d => d.size));
             console.log(layout.size());
@@ -174,15 +177,7 @@ let page1 = {
             page1.institution_data = [files[0], files[1]];
             page1.submission_data = files[3];
             page1.keyword_data = files[2];
-            // page1.dispatch.call("start");
-            page1.wordcloud();
-            console.log('pg1-1');
-            page1.piechart();
-            console.log('pg1-1');
-            page1.schedule();
-            console.log('pg1-1');
-            page1.ranklist();
-            console.log('pg1-1');
+            page1.dispatch.call("start");
         }).catch(function(err) {
             // handle error here
             console.error(err)
@@ -198,9 +193,9 @@ PageMain(() => {
     "use strict";
     //Your Content Here
     page1.dispatch = d3.dispatch("start");
-    // page1.dispatch.on("start.piechart", page1.piechart);
-    // page1.dispatch.on("start.wordcloud", page1.wordcloud);
-    // page1.dispatch.on("start.ranklist", page1.ranklist);
-    // page1.dispatch.on("start.schedule", page1.schedule);
+    page1.dispatch.on("start.piechart", page1.piechart);
+    page1.dispatch.on("start.wordcloud", page1.wordcloud);
+    page1.dispatch.on("start.ranklist", page1.ranklist);
+    page1.dispatch.on("start.schedule", page1.schedule);
     page1.load_data()
 })

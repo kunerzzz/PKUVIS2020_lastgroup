@@ -189,5 +189,10 @@
  #page3 .pg3-text-container {
 	 text-align: center;
 	 font-size: 3rem;
+	 margin-bottom: 1rem;
 	 font-family: appleberry;
+ }
+
+ #page3 #pg3-total-container {
+	 margin-top: 1.5rem;
  }
