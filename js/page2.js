@@ -74,7 +74,7 @@ let page2 = {
                         return d3.timeFormat('%Y-%m-%d %H:%M:%S')(parseDate(d['time']))
                     });
                 tooltip.style('left', (xz(parseDate(d['time'])) + 0.11 * _width) + 'px')
-                    .style('top', (y(parseInt(d[page2_y_attr])) - 0.15 * _height) + 'px')
+                    .style('top', (Math.max(0, y(parseInt(d[page2_y_attr])) - 0.15 * _height)) + 'px')
                     .style('width', (Math.min(500, (_width - (xz(parseDate(d['time'])) + 0.11 * _width))) + 'px'))
                     .style('visibility', 'visible');
 
@@ -215,7 +215,7 @@ let page2 = {
                         return d3.timeFormat('%Y-%m-%d %H:%M:%S')(parseDate(d['time']))
                     });
                 tooltip.style('left', (x(parseDate(d['time'])) + 0.11 * _width)+'px')
-                    .style('top', (y(parseInt(d[y_attr])) - 0.15 * _height) + 'px')
+                    .style('top', (Math.max(0, y(parseInt(d[page2_y_attr])) - 0.15 * _height)) + 'px')
                     .style('width', (Math.min(500, (_width - (x(parseDate(d['time'])) + 0.11 * _width))) + 'px'))
                     .style('visibility', 'visible');
 
