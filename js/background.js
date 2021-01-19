@@ -30,8 +30,8 @@ function background_render() {
         let style_width = +getComputedStyle(canvas).getPropertyValue("width").slice(0, -2);
 
         //scale the canvas
-        canvas.setAttribute('height', style_height * dpi);
-        canvas.setAttribute('width', style_width * dpi);
+        canvas.setAttribute('height', window.innerHeight);
+        canvas.setAttribute('width', window.innerWidth);
     }
 
     let particle_count = 70,
