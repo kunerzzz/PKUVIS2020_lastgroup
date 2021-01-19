@@ -35,6 +35,7 @@ let page1 = {
         let g = svg.append('g')
             .attr('transform', `translate(${width / 2}, ${height / 2}) scale(0.9)`);
         let data = page1.submission_data[page1.piechart_year - 2009];
+        d3.selectAll("#page1 ")
         let data_entities = [];
         Object.keys(data).map(d => {data[d] = +data[d]; data_entities.push({'data':d, 'value':data[d]})});
         let colorSpectral = d3.interpolateSpectral;
@@ -122,6 +123,7 @@ let page1 = {
         let width = svg.attr('width');
         let height = svg.attr('height');
         // console.log(width, height);
+        console.log('pg1-2');
         let data = page1.keyword_data.slice(0, 50);
         data = data.map(d => {return {'text':d.word, 'size':d.value};});
         // console.log(data);
@@ -141,7 +143,9 @@ let page1 = {
             .rotate(0)
             .fontSize(fontSize_f)      // font size of words
             .on("end", draw_wordcloud);
+        console.log('pg1-3');
         layout.start();
+        console.log('pg1-4');
         function draw_wordcloud(words) {
             console.log(d3.min(words, d => d.size));
             console.log(layout.size());
@@ -170,10 +174,18 @@ let page1 = {
             page1.institution_data = [files[0], files[1]];
             page1.submission_data = files[3];
             page1.keyword_data = files[2];
-            page1.dispatch.call("start");
-
+            // page1.dispatch.call("start");
+            page1.wordcloud();
+            console.log('pg1-1');
+            page1.piechart();
+            console.log('pg1-1');
+            page1.schedule();
+            console.log('pg1-1');
+            page1.ranklist();
+            console.log('pg1-1');
         }).catch(function(err) {
             // handle error here
+            console.error(err)
         })
     }
 
@@ -186,9 +198,9 @@ PageMain(() => {
     "use strict";
     //Your Content Here
     page1.dispatch = d3.dispatch("start");
-    page1.dispatch.on("start.piechart", page1.piechart);
-    page1.dispatch.on("start.wordcloud", page1.wordcloud);
-    page1.dispatch.on("start.ranklist", page1.ranklist);
-    page1.dispatch.on("start.schedule", page1.schedule);
+    // page1.dispatch.on("start.piechart", page1.piechart);
+    // page1.dispatch.on("start.wordcloud", page1.wordcloud);
+    // page1.dispatch.on("start.ranklist", page1.ranklist);
+    // page1.dispatch.on("start.schedule", page1.schedule);
     page1.load_data()
 })

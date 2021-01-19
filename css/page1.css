@@ -4,6 +4,32 @@
     font-family: 'appleberry';
     src: url('appleberry.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'NunitoSans-Italic';
+    src: url('NunitoSans-Italic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NunitoSans-Bold';
+    src: url('NunitoSans-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NunitoSans-ExtraLight';
+    src: url('NunitoSans-ExtraLight.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NunitoSans-Black';
+    src: url('NunitoSans-Black.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NunitoSans-LightItalic';
+    src: url('NunitoSans-LightItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NunitoSans-BoldItalic';
+    src: url('NunitoSans-BoldItalic.ttf') format('truetype');
+}
+
+
 
 #page1 .flex-container {
     display: -webkit-flex; /* Safari */
@@ -70,6 +96,7 @@
 }
 
 #page1 #pg1-wordcloud-container .caption {
+    font-family: NunitoSans-BoldItalic;
     padding-top: 10px;
     font-size: 1.5rem;
 }
@@ -77,8 +104,6 @@
 #page1 #pg1-info-container {
     flex: 0.3 1 auto;
 }
-
-
 
 #page1 #pg1-ranklist-container {
     flex: 1 1 auto;
@@ -101,15 +126,18 @@
     align-self: stretch;
     justify-content: space-between;
     flex-flow: column nowrap;
+    margin-left: 2rem;
 
 }
 
 #page1 .text-div div {
+    font-family: NunitoSans-Italic;
     font-size: 1.5rem;
     flex: 1 1 auto;
 }
 
 #page1 .text-div div a{
+    font-family: NunitoSans-Black;
     font-size: 1.7rem;
 }
 
@@ -119,6 +147,11 @@
 }
 
 
-#page1 .y-axis {
+#page1 svg .y-axis {
+    font-family: NunitoSans-LightItalic;
+    font-size: 1rem;
+}
+#page1 svg .label {
+    font-family: NunitoSans-Italic;
     font-size: 1rem;
 }

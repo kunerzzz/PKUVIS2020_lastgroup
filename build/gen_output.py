@@ -10,13 +10,17 @@ title = sys.argv[1]
 
 cssList = [
     'css/fullpage.css',
+    'css/d3-milestones.css'
 ]
 jsList = [
     'js/jquery-3.5.1.js',
     'js/fullpage.js',
     'js/d3.v6.js',
+    'js/d3.layout.cloud.js',
+    'js/d3-milestones.min.js',
     'js/init.js'
 ]
+
 
 cssList += map(lambda x: 'css/' + x, filter(lambda x: x[-3:] == 'css' and x[0] != '_', os.listdir('css/')))
 jsList += map(lambda x: 'js/' + x, filter(lambda x: x[-2:] == 'js' and x[0] != '_' and x != 'init.js', os.listdir('js/')))
