@@ -20,6 +20,7 @@
     <!-- Your CSS here -->
     <link rel="stylesheet" type="text/css" href="../css/common.css" />
     <link rel="stylesheet" type="text/css" href="../css/page2.css" />
+    <link rel="stylesheet" type="text/css" href="../css/page3.css" />
 
 </head>
 
@@ -27,7 +28,56 @@
     <div id="fullpage">
         <!-- BEGIN: DO NOT TOUCH THIS LINE -->
         <div id="page2" class="section">
-            <p>page2</p>
+            <div id="page2_header" class="title">
+                <p>推文总览</p>
+            </div>
+
+            <div id="page2_tooltip" class="tw-block-parent" style="background-color: white; visibility : hidden; position:absolute; z-index: 3">
+                <div class="timeline-TweetList-tweet">
+                    <div class="timeline-Tweet">
+                        <div class="timeline-Tweet-brand">
+                            <div class="Icon Icon--twitter"></div>
+                        </div>
+                        <div class="timeline-Tweet-author">
+                            <div class="TweetAuthor">
+                                <a class="TweetAuthor-link" href="#channel"> </a>
+                                <span class="TweetAuthor-avatar">
+                                    <div class="Avatar"> </div>
+                                </span>
+                                <span class="TweetAuthor-name"></span>
+                                <span class="Icon Icon--verified"></span>
+                                <span class="TweetAuthor-screenName"></span>
+                            </div>
+                        </div>
+                        <div class="timeline-Tweet-text">
+                        </div>
+                        <div class="timeline-Tweet-metadata"><span class="timeline-Tweet-timestamp"></span></div>
+                        <ul class="timeline-Tweet-actions">
+                            <li class="timeline-Tweet-action"><a class="Icon Icon--heart" href="#"></a></li>
+                            <li class="timeline-Tweet-action"><a class="Icon Icon--share" href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page2_container" class="container" style="width:80%; height:80%; position:fixed; left:10%; top:18%">
+                <svg style="width:80%; height:80%; position:fixed; left:10%; top:18%"></svg>
+                <div style="position:fixed; left: 1%; top: 15%">
+                    <p>y axis</p>
+                    <select id="select_page2_y_axis" onchange="page2.change_y_axis()">
+                        <option value="0">Retweet Count</option>
+                        <option value="1">Like Count</option>
+                    </select>
+                </div>
+                <div style="position:fixed; left: 1%; top: 30%">
+                    <p>show <br />important<br />timeline</p>
+                    <select id="select_page2_timeline" onchange="page2.change_timeline()">
+                        <option value="0">Yes</option>
+                        <option value="1" selected>No</option>
+                    </select>
+                </div>
+
+            </div>
             <!-- Your Content Here -->
         </div>
         <!-- END: DO NOT TOUCH THIS LINE -->
