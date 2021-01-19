@@ -18,7 +18,7 @@ let page1 = {
             {"time":"2020-10-22", "text": "Camera Ready Paper Deadline"},
             {"time":"2020-12-07", "text": "Conference Sessions, Tutorials, Workshops"}
         ]
-        milestones('#schedule')
+        milestones('#pg1-schedule')
             .mapping({
                 'timestamp': 'time',
             })
@@ -28,7 +28,7 @@ let page1 = {
     },
 
     piechart: function() {
-        let svg = d3.select("#statistic-container>svg");
+        let svg = d3.select("#pg1-statistic-container>svg");
         let width = svg.attr('width');
         let height = svg.attr('height');
         // console.log(width, height);
@@ -60,7 +60,7 @@ let page1 = {
     },
 
     ranklist: function() {
-        let svg = d3.select("#ranklist-container>svg");
+        let svg = d3.select("#pg1-ranklist-container>svg");
         let width = svg.attr('width');
         let height = svg.attr('height');
         console.log(width, height);
@@ -118,7 +118,7 @@ let page1 = {
     },
 
     wordcloud: function() {
-        let svg = d3.select("#wordcloud-container>svg");
+        let svg = d3.select("#pg1-wordcloud-container>svg");
         let width = svg.attr('width');
         let height = svg.attr('height');
         // console.log(width, height);
@@ -179,9 +179,6 @@ let page1 = {
 
 
 }
-
-
-
 
 
 //Function passed to PageMain will be called after DOM and all dependencies init.

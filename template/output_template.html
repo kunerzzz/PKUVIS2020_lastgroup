@@ -13,6 +13,9 @@
 {%- endfor %}
 </head>
 <body>
+    <div id="global-background" style="height: 100vh; width: 100vw;position: fixed">
+        <canvas id="global-background-canvas"></canvas>
+    </div>
     <div id="fullpage">
     {%- for page in pageList %}
         {{ page }}

@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'appleberry';
+    src: url('appleberry.ttf') format('truetype');
+}
+
+#page0 #whole-content {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-flow: column nowrap;
+    align-items:center;
+    justify-content:center;
+    width: 100%;
+    height: 100%;
+}
+
+#page0 #whole-content::before {
+    content: '';
+    flex: 0.9;
+}
+
+#page0 #title {
+    text-align: center;
+    font-size: 6rem;
+    font-family: appleberry;
+    margin-bottom: 3rem;
+    /*height: 20%;*/
+}
+
+#page0 #rest {
+    flex: 1;
+
+}
+
+#page0 #subtitle {
+    font-family: "Microsoft YaHei B";
+    font-size: 1.9rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #404040;
+}
+
+#page0 #author {
+    font-family: "Microsoft YaHei B";
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 7rem;
+    color: #808080;
+}
+
+@keyframes shake
+{
+    0%   {transform: translateY(0rem);}
+    25%  {transform: translateY(2rem);}
+    50%  {transform: translateY(0rem);}
+    75%  {transform: translateY(2rem);}
+    100% {transform: translateY(0rem);}
+}
+
+@-moz-keyframes shake /* Firefox */
+{
+    0%   {transform: translateY(0rem);}
+    25%  {transform: translateY(2rem);}
+    50%  {transform: translateY(0rem);}
+    75%  {transform: translateY(2rem);}
+    100% {transform: translateY(0rem);}
+}
+
+@-webkit-keyframes shake /* Safari 和 Chrome */
+{
+    0%   {transform: translateY(0rem);}
+    25%  {transform: translateY(2rem);}
+    50%  {transform: translateY(0rem);}
+    75%  {transform: translateY(2rem);}
+    100% {transform: translateY(0rem);}
+}
+
+@-o-keyframes shake /* Opera */
+{
+    0%   {transform: translateY(0rem);}
+    25%  {transform: translateY(2rem);}
+    50%  {transform: translateY(0rem);}
+    75%  {transform: translateY(2rem);}
+    100% {transform: translateY(0rem);}
+}
+
+#page0 #icon {
+    width: 25%;
+    height: 25%;
+    margin: auto;
+    draggable: false;
+
+    animation: shake 4s infinite;
+    -moz-animation: shake 4s infinite;	/* Firefox */
+    -webkit-animation: shake 4s infinite;	/* Safari 和 Chrome */
+    -o-animation: shake 4s infinite;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

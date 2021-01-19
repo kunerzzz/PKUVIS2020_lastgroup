@@ -20,14 +20,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21da3b24-eae3-4fd5-95e0-81fd3acc3673" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/css/page0.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/background.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/page0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/page0.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/gen_output.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/gen_output.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/page1.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/page1.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/init.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/page1.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/page1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/page1.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/page1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/page3.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/page3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template/output_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/template/output_template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/font/appleberry.ttf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,7 +60,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.karma.karma_node_package_dir" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pages" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -54,9 +74,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\luoyuchu\Desktop\VIS\project\PKUVIS2020_lastgroup\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\luoyuchu\Desktop\VIS\project\PKUVIS2020_lastgroup\pages" />
+      <recent name="C:\Users\luoyuchu\Desktop\VIS\project\PKUVIS2020_lastgroup\css" />
       <recent name="C:\Users\luoyuchu\Desktop\VIS\project\PKUVIS2020_lastgroup\js" />
     </key>
   </component>
@@ -79,7 +102,8 @@
       <option name="presentableId" value="Default" />
       <updated>1610960494084</updated>
       <workItem from="1610960495459" duration="6178000" />
-      <workItem from="1610985469195" duration="28495000" />
+      <workItem from="1610985469195" duration="33354000" />
+      <workItem from="1611068553364" duration="4029000" />
     </task>
     <servers />
   </component>
@@ -99,6 +123,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="748" y="306" key="#Web_Browsers" timestamp="1611063680653">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="748" y="306" key="#Web_Browsers/0.0.1920.1040@0.0.1920.1040" timestamp="1611063680653" />
     <state x="414" y="175" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611050109900">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -171,6 +199,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="348" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1611050132679" />
+    <state x="662" y="252" width="678" height="626" key="find.popup" timestamp="1611062897424">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="662" y="252" width="678" height="626" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1611062897424" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1610964844802">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -19,7 +19,7 @@ jsList = [
 ]
 
 cssList += map(lambda x: 'css/' + x, filter(lambda x: x[-3:] == 'css' and x[0] != '_', os.listdir('css/')))
-jsList += map(lambda x: 'js/' + x, filter(lambda x: x[-2:] == 'js' and x[0] != '_', os.listdir('js/')))
+jsList += map(lambda x: 'js/' + x, filter(lambda x: x[-2:] == 'js' and x[0] != '_' and x != 'init.js', os.listdir('js/')))
 
 pageList = []
 fileList = list(map(lambda x: 'pages/' + x, filter(lambda x: x[-4:] == 'html' and x[0] != '_', os.listdir("pages/"))))

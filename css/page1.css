@@ -2,7 +2,7 @@
 /* Descendant selector(https://www.w3school.com.cn/css/css_selector_descendant.asp) may be helpful to not pollute other pages' style*/
 @font-face {
     font-family: 'appleberry';
-    src: url('../vendor/font/appleberry.ttf') format('truetype');
+    src: url('appleberry.ttf') format('truetype');
 }
 
 #page1 .flex-container {
@@ -10,20 +10,19 @@
     display: flex;
 }
 
-#page1 #background {
+#page1 #pg1-background {
     flex-flow: column nowrap;
     align-items: stretch;
-    background-color: white;
     width: 100%;
     height: 100%;
 }
 
-#page1 #title {
+#page1 #pg1-title {
     flex: 0 1 auto;
     height: 20%;
 }
 
-#page1 #title p {
+#page1 #pg1-title p {
     font-size: 5rem;
     text-align: center;
     font-family: appleberry;
@@ -31,7 +30,7 @@
     margin-bottom: 10px;
 }
 
-#page1 #content {
+#page1 #pg1-content {
     flex: 1 1 auto;
     flex-flow: row nowrap
 }
@@ -55,37 +54,37 @@
     margin: 20px;
 }
 
-#page1 #statistic-container {
+#page1 #pg1-statistic-container {
     height: 50%;
     padding: 20px 40px 20px 70px;
 }
 
-#page1 #wordcloud-container {
+#page1 #pg1-wordcloud-container {
     height: 50%;
     flex-flow: column nowrap;
     align-items: center;
 }
 
-#page1 #wordcloud-container svg{
+#page1 #pg1-wordcloud-container svg{
     flex: 1 1 auto;
 }
 
-#page1 #wordcloud-container .caption {
+#page1 #pg1-wordcloud-container .caption {
     padding-top: 10px;
     font-size: 1.5rem;
 }
 
-#page1 #info-container {
+#page1 #pg1-info-container {
     flex: 0.3 1 auto;
 }
 
 
 
-#page1 #ranklist-container {
+#page1 #pg1-ranklist-container {
     flex: 1 1 auto;
 }
 
-#page1 #ranklist-container svg {
+#page1 #pg1-ranklist-container svg {
     flex: 1 1 auto;
     align-self: center;
     justify-self: center;
@@ -114,7 +113,7 @@
     font-size: 1.7rem;
 }
 
-#page1 #schedule {
+#page1 #pg1-schedule {
     padding-left: 30px;
     padding-right: 150px;
 }

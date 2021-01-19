@@ -10,7 +10,7 @@ function PageMain(pageMain) {
 
 let _main = function () {
     //Init fullPage.js
-    //See all options in https://github.com/alvarotrigo/fullPage.js#vanilla-js-example-with-all-options
+    //See all options in https://github.com/alletotrigo/fullPage.js#vanilla-js-example-with-all-options
     $('#fullpage').fullpage({
         //options here
     });
