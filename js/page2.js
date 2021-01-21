@@ -60,6 +60,10 @@ let page2 = {
                 return xz(parseDate(d['time']));
             })
             .on('mouseover', (e, d) => {
+                d3.select(e.srcElement)
+                    .attr('fill', 'red')
+                    .attr('opacity', 0.8);
+
                 // show a tooltip
                 let content = '<table><tr><td></td><td>' + d['text'] + '</td></tr></table>';
 
@@ -203,8 +207,9 @@ let page2 = {
                     return 'Gold';
             })
             .on('mouseover', (e, d) => {
-                // show a tooltip
-                let content = '<table><tr><td></td><td>' + d['text'] + '</td></tr></table>';
+                d3.select(e.srcElement)
+                    .attr('fill', 'red')
+                    .attr('opacity', 0.8);
 
                 // tooltip
                 let tooltip = d3.select('#page2_tooltip');
@@ -225,6 +230,20 @@ let page2 = {
 
             })
             .on('mouseout', (e, d) => {
+                d3.select(e.srcElement)
+                    .attr('opacity', (d, i) => {
+                        if (d['emotion'] > 0.0)
+                            return 0.5;
+                        else
+                            return 1.0;
+                    })
+                    .attr('fill', (d, i) => {
+                        if (d['emotion'] > 0.0)
+                            return 'MediumPurple';
+                        else
+                            return 'Gold';
+                    });
+
                 // remove tooltip
                 let tooltip = d3.select('#page2_tooltip');
                 tooltip.style('visibility', 'hidden');
@@ -355,12 +374,12 @@ let page2 = {
         if (idx == 0) {
             text_gray.style('visibility', 'visible');
             text_red.style('visibility', 'visible');
-            page2_svg.selectAll('line').style('visibility', 'visible');
+            page2_svg.selectAll('.timeline').style('visibility', 'visible');
         }
         else {
             text_gray.style('visibility', 'hidden');
             text_red.style('visibility', 'hidden');
-            page2_svg.selectAll('line').style('visibility', 'hidden');
+            page2_svg.selectAll('.timeline').style('visibility', 'hidden');
         }
             
     }
